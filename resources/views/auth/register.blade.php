@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                    <label for="name" class="col-md-4 control-label">Nombre completo</label>
+                    <label for="name" class="col-md-4 control-label">Nombre</label>
 
                     <div class="col-md-6">
                         <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
@@ -47,6 +47,52 @@
                         @if ($errors->has('name'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('name') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
+
+                <div class="form-group{{ $errors->has('lastname') ? ' has-error' : '' }}">
+                    <label for="lastname" class="col-md-4 control-label">Apellido</label>
+
+                    <div class="col-md-6">
+                        <input id="lastname" type="text" class="form-control" name="lastname" value="{{ old('lastname') }}" required autofocus>
+
+                        @if ($errors->has('lastname'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('lastname') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
+
+                <div class="form-group{{ $errors->has('team_name') ? ' has-error' : '' }}">
+                    <label for="team_name" class="col-md-4 control-label">Soy hincha de</label>
+
+                    <div class="col-md-6">
+                        <select class="form-control" id="team_name" name="team_name" required autofocus>
+                            <option value="">-- Elegí tu club --</option>
+                            @foreach ([
+                                'Club Atlético Boca Junior',
+                                'Club Atlético Independiente',
+                                'Club Atlético River Plate',
+                                'Racing Club',
+                                'Club Atlético San Lorenzo de Almagro',
+                                'Club Atlético Huracán',
+                                'Club Atlético Banfield',
+                                'Club Atlético Belgrano',
+                                'Club Atlético Newell\'s Old Boys',
+                                'Club Ferro Carril Oeste',
+                                'Tigre'
+                            ] as $teamName)
+                                <option {{$teamName == old('team_name') ? 'selected' : ''}} value="{{$teamName}}">
+                                    {{$teamName}}</option>
+                            @endforeach
+                        </select>
+                        
+                        @if ($errors->has('team_name'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('team_name') }}</strong>
                             </span>
                         @endif
                     </div>

@@ -61,7 +61,7 @@ $(function() {
 		$formGroup.toggleClass('has-success', isValid);
 	});
 
-	$('select#teamName').on('blur', function() {
+	$('select#team_name').on('blur', function() {
 		// $this es el elemento de jquery, el select
 		var $select = $(this);
 		// busco el .form-group más cercano hacia arriba en la jerarquía del DOM
@@ -110,7 +110,7 @@ $(function() {
 		$formGroup.toggleClass('has-success', isValid);
 	});
 
-	$('input#repeatPassword').on('keyup', function() {
+	$('input#password-confirm').on('keyup', function() {
 		// $this es el elemento de jquery, el input
 		var $inputRepeat = $(this);
 		var $input = $('input#password');
