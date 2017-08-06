@@ -1,27 +1,10 @@
 $(function() {
 
-	$.ajaxSetup({
-	    headers: {
-	        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-	    }
-	});
-
 	if (localStorage.getItem('href')) {
 		$('#theme').attr('href', localStorage.getItem('href'));	
 	}
 
 	/* Navegación */
-	$('.logout').on('click',function(event) {
-		$.ajax({
-			method: 'POST', 
-			url: '/logout',
-
-		}).done(function() {
-			document.location.href = '/login';
-		});
-		event.preventDefault();
-	});
-
 	var change = false;
 	$('.nav li a').each(function(index){
 		if (this.href.trim() == window.location) {
