@@ -18,3 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/user-count', 'JsonController@userCount');
+Route::get('/user-availability', 'JsonController@userAvailability');
