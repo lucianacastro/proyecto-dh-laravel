@@ -219,6 +219,15 @@ label.control-label.label-title {
 	font-size: 12px;
 }
 
+.btn.btn-primary {
+	background-color: #449D44;
+	border-color: #449D44;
+}
+
+.btn-link {
+	color: #fff;
+}
+
 /* dropdowns */
 
 ul.dropdown-menu {

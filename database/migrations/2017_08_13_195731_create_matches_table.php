@@ -20,6 +20,7 @@ class CreateMatchesTable extends Migration
         $table->string('field');
         $table->integer('number_of_players');
         $table->timestamp('date');
+        $table->timestamps();
     });
     }
 

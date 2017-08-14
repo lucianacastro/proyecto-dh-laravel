@@ -21,6 +21,17 @@ class MatchController extends Controller
     	$match->number_of_players = \Request::input('number_of_players');
     	$match->date = \Request::input('date');
     	$match->save();
-    	return redirect('match/create')->with('message', 'Match saved');
+    	return redirect('/match/'.$match->id)->with('message', 'Match saved');
+    }
+
+    public function directory() {
+		$matches = \App\Match::where('title', 'LIKE', '%')->get();
+		return view('matches.directory', ['matches' => $matches]);
+	}
+
+	public function show($id)
+    {
+    	$match = \App\Match::findOrFail($id);
+    	return view('matches.show', ['match' => $match]);	
     }
 }

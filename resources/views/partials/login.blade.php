@@ -19,8 +19,8 @@
 						</div>
 						
 						
-						@if (!empty($errors))
-							@foreach($errors as $fieldName => $message)
+						@if (!empty($errors->all()))
+							@foreach($errors->all() as $fieldName => $message)
 							<div class="alert alert-danger" role="alert">{{$message}}</div>
 							@endforeach
 						@endif

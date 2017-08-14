@@ -23,3 +23,6 @@ Route::get('/user-availability', 'JsonController@userAvailability');
 //Route::resource('/match', 'MatchController');
 Route::get('/match', 'MatchController@create')->name('match.create');
 Route::post('/match', 'MatchController@store')->name('match.store');
+
+Route::get('/matches', 'MatchController@directory');
+Route::get('/match/{id}', 'MatchController@show');
