@@ -42,6 +42,7 @@
 				</div>
 				<div class="panel-footer">
 					{{ $matches->links() }}
+					<div class="img-footer"></div>
 				</div>
 			</div>
 		</div>
