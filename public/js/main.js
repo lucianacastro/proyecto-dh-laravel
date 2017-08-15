@@ -107,23 +107,23 @@ $(function() {
 
 	/* Themes changes*/
 	$('#original').click(function(){
-		$('#theme').attr('href', 'css/stylesheet.css');
-		localStorage.setItem('href', 'css/stylesheet.css');
+		$('#theme').attr('href', '/css/stylesheet.css');
+		localStorage.setItem('href', '/css/stylesheet.css');
 	});
 
 	$('#ortigoza').click(function(){
-		$('#theme').attr('href', 'css/stylesheet-ortigoza.css');
-		localStorage.setItem('href', 'css/stylesheet-ortigoza.css');
+		$('#theme').attr('href', '/css/stylesheet-ortigoza.css');
+		localStorage.setItem('href', '/css/stylesheet-ortigoza.css');
 	});
 
 	$('#peron').click(function(){
-		$('#theme').attr('href', 'css/stylesheet-peron.css');
-		localStorage.setItem('href', 'css/stylesheet-peron.css');
+		$('#theme').attr('href', '/css/stylesheet-peron.css');
+		localStorage.setItem('href', '/css/stylesheet-peron.css');
 	});
 
 	$('#fort').click(function(){
-		$('#theme').attr('href', 'css/stylesheet-fort.css');
-		localStorage.setItem('href', 'css/stylesheet-fort.css');
+		$('#theme').attr('href', '/css/stylesheet-fort.css');
+		localStorage.setItem('href', '/css/stylesheet-fort.css');
 	});
 
 
@@ -150,7 +150,7 @@ function validateEmail(value) {
 function validateEmailUnique(value, callback) {
 	$.ajax({
 		method: 'GET', 
-		url: 'user-availability?email=' + value,
+		url: '/user-availability?email=' + value,
 	}).done(function(res) {
 		var isValid = res.available;
 		callback(isValid);
@@ -169,7 +169,7 @@ function validateRepeatPassword(valueRepeat, value) {
 function getUsersCount(callback) {
 	$.ajax({
 		method: 'GET', 
-		url: 'user-count',
+		url: '/user-count',
 	}).done(function(res) {
 		var total = res.total;
 		callback(total);

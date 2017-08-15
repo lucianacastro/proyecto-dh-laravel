@@ -23,6 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if (!\Auth::guest()) {
+            return redirect('/matches');
+        }
+        return view('welcome');
     }
 }

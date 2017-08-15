@@ -31,7 +31,6 @@
 
                 <div class="form-group">
                     <div class="col-sm-12">
-                    
                         
                         <!-- mostrar errores en alert -->
                         @if (count($errors->all()))

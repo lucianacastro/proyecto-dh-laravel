@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" id="theme" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" id="theme" href="{{ asset('css/stylesheet.css') }}">
 </head>
 <body>
     <div id="app">
@@ -31,7 +31,7 @@
                 <div class="row header-row">
                     <div class="col-sm-7">
                         <a href="{{ url('/') }}">
-                            <img src="images/logo_TeamUp-ss-cut.png" class="header-img">
+                            <img src="{{ asset('images/logo_TeamUp-ss-cut.png') }}" class="header-img">
                         </a>
                     </div>
                     <div class="col-sm-4">
@@ -49,6 +49,12 @@
                                         </a>
 
                                         <ul class="dropdown-menu" role="menu">
+                                            <li>
+                                                <a href="{{ url('/my-matches') }}">Mis partidos</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ url('/matches') }}">Ver todos los partidos</a>
+                                            </li>
                                             <li>
                                                 <a href="{{ route('logout') }}"
                                                     onclick="event.preventDefault();
@@ -90,7 +96,7 @@
       integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
       crossorigin="anonymous"></script>
     <!--script type="text/javascript" src="bootstrap/js/bootstrap.js"></script -->
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 
     <script src="{{ asset('js/app.js') }}"></script>
 

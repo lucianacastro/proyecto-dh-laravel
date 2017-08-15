@@ -66,6 +66,9 @@
             <a class="btn btn-link forget" href="{{ route('password.request') }}">
                 Olvidaste tu contraseña?
             </a>
+            <a class="btn btn-link" href="{{ url('/register') }}">
+                Crear una nueva cuenta
+            </a>
         </div>
         
     </div>
