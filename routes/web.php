@@ -19,6 +19,9 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/faqs', function () {
+	return view('faqs');
+});
 Route::get('/user-count', 'JsonController@userCount');
 Route::get('/user-availability', 'JsonController@userAvailability');
 

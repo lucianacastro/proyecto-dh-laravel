@@ -69,7 +69,7 @@
                                         </ul>
                                     </li>
                                 @endif
-
+                                    <li><a href="{{ url('/faqs') }}">FAQs</a></li>
                                     <li class="dropdown theme-choice">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Themes<span class="caret"></span></a>
                                         
