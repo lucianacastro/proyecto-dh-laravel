@@ -56,6 +56,7 @@
 								</tbody>
 							</table>
 						</div>
+						<div class="pic-head"></div>
 					</div>
 				</div>
 				<div class="panel-footer">
