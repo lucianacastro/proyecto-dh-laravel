@@ -223,10 +223,44 @@ label.control-label.label-title {
 	background-color: #449D44;
 	border-color: #449D44;
 }
+.btn.btn-primary.login {
+	width: 200px;
+	float: right;
+	margin-top: 10px;
+	border-radius: 20px;
+	text-transform: uppercase;
+}
+
+.btn.btn-primary.register {
+	width: 200px;
+	float: right;
+	margin-top: 10px;
+	border-radius: 20px;
+}
+
 
 .btn-link {
 	color: #fff;
+	width: 200px;
+	float: right;
+	margin-top: 10px;
+	border-radius: 20px;
 }
+
+.btn.btn-link.forget {
+	float: right;
+	margin-top: 20px;
+}
+
+.btn.btn-link.forget:hover {
+	color: #449D44;
+}
+
+input.input-login {
+	height: 45px;
+	background-color: #fff;
+}
+
 
 
 /* dropdowns */

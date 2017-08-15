@@ -18,10 +18,10 @@
     </div>
 
     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-        <label for="email" class="col-md-4 control-label">E-Mail</label>
+        <label for="email" class="col-sm-12 control-label" placeholder="Ingresá tu e-mail"></label>
 
-        <div class="col-md-6">
-            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+        <div class="col-sm-12">
+            <input id="email" type="email" class="form-control input-login" name="email" value="{{ old('email') }}" required autofocus>
 
             @if ($errors->has('email'))
                 <span class="help-block">
@@ -32,10 +32,10 @@
     </div>
 
     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-        <label for="password" class="col-md-4 control-label">Contraseña</label>
+        <label for="password" class="col-sm-12 control-label"></label>
 
-        <div class="col-md-6">
-            <input id="password" type="password" class="form-control" name="password" required>
+        <div class="col-sm-12">
+            <input id="password" type="password" class="form-control input-login" name="password" required>
 
             @if ($errors->has('password'))
                 <span class="help-block">
@@ -46,7 +46,7 @@
     </div>
 
     <div class="form-group">
-        <div class="col-md-6 col-md-offset-4">
+        <div class="col-sm-12">
             <div class="checkbox">
                 <label>
                     <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Recordarme
@@ -56,14 +56,17 @@
     </div>
 
     <div class="form-group">
-        <div class="col-md-8 col-md-offset-4">
-            <button type="submit" class="btn btn-primary">
-                Login
+        <div class="col-sm-12 pull-right">
+            <button type="submit" class="btn btn-primary login">
+                iniciar sesión
             </button>
+        </div>
 
-            <a class="btn btn-link" href="{{ route('password.request') }}">
+        <div class="col-sm-12 pull-right">
+            <a class="btn btn-link forget" href="{{ route('password.request') }}">
                 Olvidaste tu contraseña?
             </a>
         </div>
+        
     </div>
 </form>
